@@ -41,6 +41,8 @@ This project is a real-time device tracking application that uses Node.js, Expre
 
 ### app.js
 
+This file sets up the Express server and integrates Socket.io for real-time communication.
+
 ```javascript
 // filepath: /c:/Users/shikh/OneDrive/Documents/RealTime Device Tracker/app.js
 const express = require('express');
@@ -65,9 +67,12 @@ app.get('/', function(req, res) {
 });
 
 server.listen(3000);
+console.log("Server is running on http://localhost:3000");
 ```
 
 ### views/index.ejs
+
+This file contains the HTML structure and includes the necessary scripts for Leaflet.js and Socket.io.
 
 ```html
 <!-- filepath: /c:/Users/shikh/OneDrive/Documents/RealTime Device Tracker/views/index.ejs -->
@@ -90,6 +95,8 @@ server.listen(3000);
 ```
 
 ### public/js/script.js
+
+This file handles the client-side logic for geolocation and real-time communication with the server.
 
 ```javascript
 // filepath: /c:/Users/shikh/OneDrive/Documents/RealTime Device Tracker/public/js/script.js
